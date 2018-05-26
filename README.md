@@ -10,3 +10,5 @@ This MATLAB function allows one to scrape the entire option chain of a given exp
 [call_table_SPX,put_table_SPX] = YahooOptionScraper('^SPX','2018-06-15');
 
 This should all take around 30 seconds, and the majority of this time is due to the writing of the Excel files.
+
+****Note that you need to have cell2str.m in your directory as well. This is available for download on the FileExchange
