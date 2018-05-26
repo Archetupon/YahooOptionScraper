@@ -22,10 +22,10 @@ function [call_table,put_table] = YahooOptionScraper(ticker,ExpDate)
 %   and TLT expiring on June 15th, 2018. This should all take around 30
 %   second (and most of that is due to the writing of the excel files)
 %
-%   [call_table_SPY,put_table_SPY] = GetYahooOptionChain('SPY','2018-06-15');
-%   [call_table_IAU,put_table_GLD] = GetYahooOptionChain('','2018-06-15');
-%   [call_table_TLT,put_table_TLT] = GetYahooOptionChain('TLT','2018-06-15');
-%   [call_table_SPX,put_table_SPX] = GetYahooOptionChain('^SPX','2018-06-15'); 
+%   [call_table_SPY,put_table_SPY] = YahooOptionScraper('SPY','2018-06-15');
+%   [call_table_IAU,put_table_GLD] = YahooOptionScraper('','2018-06-15');
+%   [call_table_TLT,put_table_TLT] = YahooOptionScraper('TLT','2018-06-15');
+%   [call_table_SPX,put_table_SPX] = YahooOptionScraper('^SPX','2018-06-15'); 
 
 if nargin < 2
     error('input function has one agument, it require minimum two inputs')
