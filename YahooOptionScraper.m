@@ -2,6 +2,7 @@ function [call_table,put_table] = YahooOptionScraper(ticker,ExpDate)
 
 %FUNCTION
 %   Function obtains stocks and indexes option chains from Yahoo finance
+%   ****Note that you need to have cell2str.m in your directory as well. This is available for download on the FileExchange
 %
 %INPUT arguments: 
 %   Ticker: string format! Yahoo Finance compatible ticker, for index there should be
