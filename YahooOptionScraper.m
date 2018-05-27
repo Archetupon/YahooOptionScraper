@@ -28,8 +28,8 @@ function [call_table,put_table] = YahooOptionScraper(ticker)
 
 %++ Contrust url ++%   
 Basename1 = 'https://finance.yahoo.com/quote/';
-Basename2 = '/options?ltr=1';
-url1 = [Basename1,ticker,Basename2];
+Basename2 = '/options?p=';
+url1 = [Basename1,ticker,Basename2,ticker];
 
 %++ Grab Yahoo Finance base url and html code ++%
 html1 = webread(url1);
@@ -58,7 +58,7 @@ epoch = '01-Jan-1970';
 formatIn = 'dd-mmm-yyyy';
 time_matlab = ones(length(maturities_store),1).*datenum(epoch,formatIn) + maturities_store./86400;
 maturities_hooman_read = datestr(time_matlab,'yyyy-mm-dd');
-maturities_index = ones(length(maturities_hooman_read),1);
+maturities_index = ones(size(maturities_hooman_read,1),1);
 maturities_index = cumsum(maturities_index);
 pad = strings(length(maturities_index),1);
 fprintf('Currently Active Maturities for ');
