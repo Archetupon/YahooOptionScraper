@@ -65,9 +65,13 @@ fprintf('Currently Active Maturities for ');
 fprintf(ticker);
 fprintf(' are: \n');
 disp([maturities_index pad maturities_hooman_read])
-fprintf('Please enter the indexes (left side numbers) for the maturities you want and press enter: \n');
-prompt = 'For multiple maturities, please enter in array of the form [x;y;z] \n';
+fprintf('Please enter the indexes (left side numbers) for the maturities you want and press enter. \n');
+fprintf('If you simply want all currently available, enter 0. \n');
+prompt = 'For multiple maturities, you need to enter in array of the form [x;y;z] \n';
 user_choice = input(prompt);
+if user_choice == 0
+    user_choice = (1:1:length(maturities_index))';
+end
 user_maturities = maturities_hooman_read(user_choice,:);
 %***************************************************%
 
