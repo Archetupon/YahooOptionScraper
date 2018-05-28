@@ -7,10 +7,6 @@ function [call_table,put_table] = YahooOptionScraper(ticker)
 %INPUT arguments: 
 %   Ticker: string format! Yahoo Finance compatible ticker, for index there should be
 %   '^...', i.e. ^SPX for the S&P500 index
-%   ExpDate: string format of 'yyyy-MM-dd'. Currently you need to look up a
-%   real expiry date (possible improvement of this in the future to choose
-%   nth out expiry. The code automatically converts this to UNIX time for
-%   the Yahoo url
 %
 %OUTPUT arguments:
 %   call and put option tables with structure 'Last_Trade_Date', 'Expiration', 'Strike', 'OptType',
